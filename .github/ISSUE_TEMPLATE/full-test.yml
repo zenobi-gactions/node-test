@@ -1,0 +1,94 @@
+name: GitHub Issue forms test
+description: Guided issue forms test
+title: "[Prefix] "
+labels: ["bug", "help wanted"]
+assignees: ["Balastrong"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please fill out the sections below to help us reproduce and fix the bug you are encountering.
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe your issue
+      placeholder: When I click here it happens this
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to page X
+        2. Click here
+        3. Click there
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What was the expected result?
+      placeholder: I expected this to happen
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Put here any screenshots or videos (optional)
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Extra fields
+      options:
+        - label: I have used the search function to check if an issue already exists
+          required: true
+        - label: I want to work on this issue
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting this issue! We will get back to you as soon as possible.
+  - type: markdown
+    attributes:
+      value: "## More inputs"
+  - type: markdown
+    attributes:
+      value: |
+        You better not add too many required fields, as it will discourage people from reporting issues.
+        Anyway, this was just to test what the issue form can do so...
+        Let's add some more inputs!
+  - type: input
+    id: input
+    attributes:
+      label: A simple input
+      placeholder: Add something that fits one line
+  - type: dropdown
+    id: seniority
+    attributes:
+      label: Select your seniority
+      options:
+        - Junior
+        - Mid
+        - Senior
+        - Staff
+  - type: dropdown
+    id: browser
+    attributes:
+      label: You can select more options here
+      multiple: true
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+  - type: dropdown
+    id: download
+    attributes:
+      description: ""
+      label: How did you download the software?
+      options:
+        - Built from source
+        - Homebrew
+        - MacPorts
+        - apt-get
+      default: 0
